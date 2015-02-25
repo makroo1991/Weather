@@ -102,7 +102,7 @@
 				998EEA4C1A9DF93800BD1954 /* AppDelegate.h */,
 				998EEA4D1A9DF93800BD1954 /* AppDelegate.m */,
 				998EEA751A9DFCEA00BD1954 /* Managers */,
-				998EEA841A9E0E1200BD1954 /* Modals */,
+				998EEA841A9E0E1200BD1954 /* Models */,
 				998EEA771A9DFD2300BD1954 /* Controllers */,
 				998EEA881A9E134A00BD1954 /* Views */,
 				998EEA581A9DF93800BD1954 /* Images.xcassets */,
@@ -187,13 +187,13 @@
 			path = YQL;
 			sourceTree = "<group>";
 		};
-		998EEA841A9E0E1200BD1954 /* Modals */ = {
+		998EEA841A9E0E1200BD1954 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				998EEA851A9E0E2D00BD1954 /* Weather.h */,
 				998EEA861A9E0E2D00BD1954 /* Weather.m */,
 			);
-			name = Modals;
+			name = Models;
 			sourceTree = "<group>";
 		};
 		998EEA881A9E134A00BD1954 /* Views */ = {
