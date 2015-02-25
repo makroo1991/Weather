@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "WeatherManager.h"
 
 @interface ViewController ()
 
@@ -19,6 +20,12 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    [WeatherManager queryWeatherWithWOEID:Odessa_WOEID succesCallback:^(NSDictionary *response) {
+        
+    } errorCallback:^(NSString *error) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

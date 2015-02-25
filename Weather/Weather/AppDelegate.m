@@ -23,6 +23,8 @@
     UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window = window;
     
+    [DBManager sharedInstance];
+    
     self.viewController = [[ViewController alloc] init];
 
     self.window.rootViewController = self.viewController;

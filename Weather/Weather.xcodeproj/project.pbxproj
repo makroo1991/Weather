@@ -15,6 +15,9 @@
 		998EEA5C1A9DF93800BD1954 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 998EEA5A1A9DF93800BD1954 /* LaunchScreen.xib */; };
 		998EEA681A9DF93800BD1954 /* WeatherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 998EEA671A9DF93800BD1954 /* WeatherTests.m */; };
 		998EEA741A9DFAE400BD1954 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 998EEA731A9DFAE400BD1954 /* DBManager.m */; };
+		998EEA7B1A9E001E00BD1954 /* WeatherManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 998EEA7A1A9E001E00BD1954 /* WeatherManager.m */; };
+		998EEA801A9E003500BD1954 /* YQL.m in Sources */ = {isa = PBXBuildFile; fileRef = 998EEA7F1A9E003500BD1954 /* YQL.m */; };
+		998EEA831A9E007800BD1954 /* WOEID.m in Sources */ = {isa = PBXBuildFile; fileRef = 998EEA821A9E007800BD1954 /* WOEID.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,12 @@
 		998EEA671A9DF93800BD1954 /* WeatherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherTests.m; sourceTree = "<group>"; };
 		998EEA721A9DFAE400BD1954 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
 		998EEA731A9DFAE400BD1954 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		998EEA791A9E001E00BD1954 /* WeatherManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherManager.h; sourceTree = "<group>"; };
+		998EEA7A1A9E001E00BD1954 /* WeatherManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherManager.m; sourceTree = "<group>"; };
+		998EEA7E1A9E003500BD1954 /* YQL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQL.h; sourceTree = "<group>"; };
+		998EEA7F1A9E003500BD1954 /* YQL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQL.m; sourceTree = "<group>"; };
+		998EEA811A9E007800BD1954 /* WOEID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOEID.h; sourceTree = "<group>"; };
+		998EEA821A9E007800BD1954 /* WOEID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOEID.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +100,7 @@
 				998EEA581A9DF93800BD1954 /* Images.xcassets */,
 				998EEA5A1A9DF93800BD1954 /* LaunchScreen.xib */,
 				998EEA4F1A9DF93800BD1954 /* Weather.xcdatamodeld */,
+				998EEA7D1A9E003500BD1954 /* YQL */,
 				998EEA481A9DF93800BD1954 /* Supporting Files */,
 			);
 			path = Weather;
@@ -125,18 +135,19 @@
 		998EEA751A9DFCEA00BD1954 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				998EEA761A9DFCF700BD1954 /* DB */,
+				998EEA781A9DFFC700BD1954 /* Weather */,
+				998EEA761A9DFCF700BD1954 /* Database */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
 		};
-		998EEA761A9DFCF700BD1954 /* DB */ = {
+		998EEA761A9DFCF700BD1954 /* Database */ = {
 			isa = PBXGroup;
 			children = (
 				998EEA721A9DFAE400BD1954 /* DBManager.h */,
 				998EEA731A9DFAE400BD1954 /* DBManager.m */,
 			);
-			name = DB;
+			name = Database;
 			sourceTree = "<group>";
 		};
 		998EEA771A9DFD2300BD1954 /* Controllers */ = {
@@ -146,6 +157,26 @@
 				998EEA531A9DF93800BD1954 /* ViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		998EEA781A9DFFC700BD1954 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				998EEA791A9E001E00BD1954 /* WeatherManager.h */,
+				998EEA7A1A9E001E00BD1954 /* WeatherManager.m */,
+				998EEA811A9E007800BD1954 /* WOEID.h */,
+				998EEA821A9E007800BD1954 /* WOEID.m */,
+			);
+			name = Weather;
+			sourceTree = "<group>";
+		};
+		998EEA7D1A9E003500BD1954 /* YQL */ = {
+			isa = PBXGroup;
+			children = (
+				998EEA7E1A9E003500BD1954 /* YQL.h */,
+				998EEA7F1A9E003500BD1954 /* YQL.m */,
+			);
+			path = YQL;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,9 +280,12 @@
 			files = (
 				998EEA511A9DF93800BD1954 /* Weather.xcdatamodeld in Sources */,
 				998EEA4E1A9DF93800BD1954 /* AppDelegate.m in Sources */,
+				998EEA831A9E007800BD1954 /* WOEID.m in Sources */,
+				998EEA7B1A9E001E00BD1954 /* WeatherManager.m in Sources */,
 				998EEA541A9DF93800BD1954 /* ViewController.m in Sources */,
 				998EEA4B1A9DF93800BD1954 /* main.m in Sources */,
 				998EEA741A9DFAE400BD1954 /* DBManager.m in Sources */,
+				998EEA801A9E003500BD1954 /* YQL.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
