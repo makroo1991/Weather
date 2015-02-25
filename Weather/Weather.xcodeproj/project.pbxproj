@@ -11,10 +11,10 @@
 		998EEA4E1A9DF93800BD1954 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 998EEA4D1A9DF93800BD1954 /* AppDelegate.m */; };
 		998EEA511A9DF93800BD1954 /* Weather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 998EEA4F1A9DF93800BD1954 /* Weather.xcdatamodeld */; };
 		998EEA541A9DF93800BD1954 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 998EEA531A9DF93800BD1954 /* ViewController.m */; };
-		998EEA571A9DF93800BD1954 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 998EEA551A9DF93800BD1954 /* Main.storyboard */; };
 		998EEA591A9DF93800BD1954 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 998EEA581A9DF93800BD1954 /* Images.xcassets */; };
 		998EEA5C1A9DF93800BD1954 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 998EEA5A1A9DF93800BD1954 /* LaunchScreen.xib */; };
 		998EEA681A9DF93800BD1954 /* WeatherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 998EEA671A9DF93800BD1954 /* WeatherTests.m */; };
+		998EEA741A9DFAE400BD1954 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 998EEA731A9DFAE400BD1954 /* DBManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,12 +36,13 @@
 		998EEA501A9DF93800BD1954 /* Weather.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Weather.xcdatamodel; sourceTree = "<group>"; };
 		998EEA521A9DF93800BD1954 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		998EEA531A9DF93800BD1954 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		998EEA561A9DF93800BD1954 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		998EEA581A9DF93800BD1954 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		998EEA5B1A9DF93800BD1954 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		998EEA611A9DF93800BD1954 /* WeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		998EEA661A9DF93800BD1954 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		998EEA671A9DF93800BD1954 /* WeatherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherTests.m; sourceTree = "<group>"; };
+		998EEA721A9DFAE400BD1954 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		998EEA731A9DFAE400BD1954 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +86,8 @@
 			children = (
 				998EEA4C1A9DF93800BD1954 /* AppDelegate.h */,
 				998EEA4D1A9DF93800BD1954 /* AppDelegate.m */,
-				998EEA521A9DF93800BD1954 /* ViewController.h */,
-				998EEA531A9DF93800BD1954 /* ViewController.m */,
-				998EEA551A9DF93800BD1954 /* Main.storyboard */,
+				998EEA751A9DFCEA00BD1954 /* Managers */,
+				998EEA771A9DFD2300BD1954 /* Controllers */,
 				998EEA581A9DF93800BD1954 /* Images.xcassets */,
 				998EEA5A1A9DF93800BD1954 /* LaunchScreen.xib */,
 				998EEA4F1A9DF93800BD1954 /* Weather.xcdatamodeld */,
@@ -120,6 +120,32 @@
 				998EEA661A9DF93800BD1954 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		998EEA751A9DFCEA00BD1954 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				998EEA761A9DFCF700BD1954 /* DB */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		998EEA761A9DFCF700BD1954 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				998EEA721A9DFAE400BD1954 /* DBManager.h */,
+				998EEA731A9DFAE400BD1954 /* DBManager.m */,
+			);
+			name = DB;
+			sourceTree = "<group>";
+		};
+		998EEA771A9DFD2300BD1954 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				998EEA521A9DF93800BD1954 /* ViewController.h */,
+				998EEA531A9DF93800BD1954 /* ViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,7 +228,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				998EEA571A9DF93800BD1954 /* Main.storyboard in Resources */,
 				998EEA5C1A9DF93800BD1954 /* LaunchScreen.xib in Resources */,
 				998EEA591A9DF93800BD1954 /* Images.xcassets in Resources */,
 			);
@@ -226,6 +251,7 @@
 				998EEA4E1A9DF93800BD1954 /* AppDelegate.m in Sources */,
 				998EEA541A9DF93800BD1954 /* ViewController.m in Sources */,
 				998EEA4B1A9DF93800BD1954 /* main.m in Sources */,
+				998EEA741A9DFAE400BD1954 /* DBManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,14 +274,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		998EEA551A9DF93800BD1954 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				998EEA561A9DF93800BD1954 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		998EEA5A1A9DF93800BD1954 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -350,6 +368,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Weather/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -360,6 +379,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Weather/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
