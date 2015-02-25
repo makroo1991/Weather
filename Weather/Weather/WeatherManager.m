@@ -17,7 +17,7 @@
                 errorCallback:(void (^)( NSString *error)) errorCallback {
     
     YQL *yql = [[YQL alloc] init];
-    NSString *queryString = [NSString stringWithFormat:@"select item.condition from weather.forecast where woeid=%@",WOEID];
+    NSString *queryString = [NSString stringWithFormat:@"select * from weather.forecast where woeid=%@",WOEID];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         NSDictionary *results = [yql query:queryString];
@@ -26,7 +26,7 @@
             NSLog(@"results: %@",results[@"query"][@"results"]);
             
             if(results){
-                Weather *weather = [[Weather alloc] initWithDictionary:[results valueForKeyPath:@"query.results.channel.item.condition"]];
+                Weather *weather = [[Weather alloc] initWithDictionary:results];
                 
                 successCallback(weather);
             } else

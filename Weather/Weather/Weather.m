@@ -15,10 +15,14 @@
     
     if(self) {
         
-        self.code = [NSNumber numberWithInt:[[dic valueForKey:@"code"] intValue]];
-        self.date = [dic valueForKey:@"date"];
-        self.temp = [NSNumber numberWithInt:[[dic valueForKey:@"temp"] intValue]];
-        self.text = [dic valueForKey:@"text"];
+        self.city = [dic valueForKeyPath:@"query.results.channel.location.city"];
+        
+        NSDictionary * conditionDic = [dic valueForKeyPath:@"query.results.channel.item.condition"];
+        
+        self.code = [NSNumber numberWithInt:[[conditionDic valueForKey:@"code"] intValue]];
+        self.date = [conditionDic valueForKey:@"date"];
+        self.temp = [NSNumber numberWithInt:[[conditionDic valueForKey:@"temp"] intValue]];
+        self.text = [conditionDic valueForKey:@"text"];
         
     }
     

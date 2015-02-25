@@ -13,6 +13,7 @@
 @interface WeatherView : UIView {
     UILabel *_tempLb;
     UILabel *_textLb;
+    UILabel *_cityLb;
     
 }
 

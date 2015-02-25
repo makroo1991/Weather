@@ -16,21 +16,24 @@
     
     if(self) {
         
-        int tempLbWidthHeight = [UIScreen mainScreen].bounds.size.width - 100;
+        int lbHeight = [UIScreen mainScreen].bounds.size.width - 100;
         
-        _tempLb = [[UILabel alloc] initWithFrame:CGRectMake(self.center.x - tempLbWidthHeight / 2, self.center.y - tempLbWidthHeight / 2, tempLbWidthHeight, tempLbWidthHeight)];
-//        _tempLb.backgroundColor = [UIColor grayColor];
+        _tempLb = [[UILabel alloc] initWithFrame:CGRectMake(self.center.x - lbHeight / 2, self.center.y - lbHeight / 2, lbHeight, lbHeight)];
         _tempLb.textAlignment = NSTextAlignmentCenter;
-        _tempLb.font = [UIFont systemFontOfSize:tempLbWidthHeight / 2];
+        _tempLb.font = [UIFont systemFontOfSize:lbHeight / 2];
         [self addSubview:_tempLb];
         
-        int textLbHeight = 25;
+        lbHeight = 25;
         
-        _textLb = [[UILabel alloc] initWithFrame:CGRectMake(0, textLbHeight, _tempLb.bounds.size.width, textLbHeight)];
-//        _textLb.backgroundColor = [UIColor whiteColor];
+        _textLb = [[UILabel alloc] initWithFrame:CGRectMake(0, lbHeight, _tempLb.bounds.size.width, lbHeight)];
         _textLb.textAlignment = NSTextAlignmentCenter;
-        _textLb.font = [UIFont systemFontOfSize:textLbHeight];
+        _textLb.font = [UIFont systemFontOfSize:lbHeight];
         [_tempLb addSubview:_textLb];
+        
+        _cityLb = [[UILabel alloc] initWithFrame:CGRectMake(0, _tempLb.bounds.size.height - lbHeight, _tempLb.bounds.size.width, lbHeight)];
+        _cityLb.textAlignment = NSTextAlignmentCenter;
+        _cityLb.font = [UIFont systemFontOfSize:lbHeight];
+        [_tempLb addSubview:_cityLb];
         
     }
     
@@ -40,6 +43,7 @@
 - (void)updateView:(Weather *)weather {
     _tempLb.text = [weather.temp stringValue];
     _textLb.text = weather.text;
+    _cityLb.text = weather.city;
 }
 
 @end

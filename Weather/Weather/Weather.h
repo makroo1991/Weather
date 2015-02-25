@@ -12,6 +12,7 @@
 
 - (id)initWithDictionary:(NSDictionary *)dic;
 
+@property (nonatomic, strong) NSString *city;
 @property (nonatomic, strong) NSNumber *code;
 @property (nonatomic, strong) NSDate *date;
 @property (nonatomic, strong) NSNumber *temp;
