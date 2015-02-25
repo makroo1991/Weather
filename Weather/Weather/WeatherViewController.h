@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@class WeatherView;
 
+@interface WeatherViewController : UIViewController {
+    WeatherView *_weatherView;
+}
 
 @end
 

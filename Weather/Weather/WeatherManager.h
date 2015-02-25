@@ -9,10 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "WOEID.h"
 
+@class Weather;
+
 @interface WeatherManager : NSObject
 
 + (void)queryWeatherWithWOEID:(NSString *)WOEID
-               succesCallback:(void (^)(NSDictionary *response)) successCallback
+               succesCallback:(void (^)(Weather *weather)) successCallback
                 errorCallback:(void (^)( NSString *error)) errorCallback;
 
 @end

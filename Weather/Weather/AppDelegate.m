@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "WeatherViewController.h"
 #import "DBManager.h"
 
 @interface AppDelegate ()
@@ -25,7 +25,7 @@
     
     [DBManager sharedInstance];
     
-    self.viewController = [[ViewController alloc] init];
+    self.viewController = [[WeatherViewController alloc] init];
 
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];

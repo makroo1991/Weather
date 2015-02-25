@@ -6,14 +6,15 @@
 //  Copyright (c) 2015 Mark. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "WeatherViewController.h"
+#import "WeatherView.h"
 #import "WeatherManager.h"
 
-@interface ViewController ()
+@interface WeatherViewController ()
 
 @end
 
-@implementation ViewController
+@implementation WeatherViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -21,7 +22,20 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    [WeatherManager queryWeatherWithWOEID:Odessa_WOEID succesCallback:^(NSDictionary *response) {
+    [self initWeatherView];
+    
+    [self updateWeather];
+    
+}
+
+- (void)initWeatherView {
+    _weatherView = [[WeatherView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:_weatherView];
+}
+
+- (void)updateWeather {
+    [WeatherManager queryWeatherWithWOEID:Odessa_WOEID succesCallback:^(Weather *weather) {
+        [_weatherView updateView:weather];
         
     } errorCallback:^(NSString *error) {
         
