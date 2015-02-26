@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		998EEA4B1A9DF93800BD1954 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 998EEA4A1A9DF93800BD1954 /* main.m */; };
 		998EEA4E1A9DF93800BD1954 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 998EEA4D1A9DF93800BD1954 /* AppDelegate.m */; };
-		998EEA511A9DF93800BD1954 /* Weather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 998EEA4F1A9DF93800BD1954 /* Weather.xcdatamodeld */; };
 		998EEA541A9DF93800BD1954 /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 998EEA531A9DF93800BD1954 /* WeatherViewController.m */; };
 		998EEA591A9DF93800BD1954 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 998EEA581A9DF93800BD1954 /* Images.xcassets */; };
 		998EEA5C1A9DF93800BD1954 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 998EEA5A1A9DF93800BD1954 /* LaunchScreen.xib */; };
@@ -20,6 +19,7 @@
 		998EEA831A9E007800BD1954 /* WOEID.m in Sources */ = {isa = PBXBuildFile; fileRef = 998EEA821A9E007800BD1954 /* WOEID.m */; };
 		998EEA871A9E0E2D00BD1954 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 998EEA861A9E0E2D00BD1954 /* Weather.m */; };
 		998EEA8B1A9E138100BD1954 /* WeatherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 998EEA8A1A9E138100BD1954 /* WeatherView.m */; };
+		99E407521A9F30BE00C38C9A /* WeatherDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99E407501A9F30BE00C38C9A /* WeatherDB.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,6 @@
 		998EEA4A1A9DF93800BD1954 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		998EEA4C1A9DF93800BD1954 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		998EEA4D1A9DF93800BD1954 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		998EEA501A9DF93800BD1954 /* Weather.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Weather.xcdatamodel; sourceTree = "<group>"; };
 		998EEA521A9DF93800BD1954 /* WeatherViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
 		998EEA531A9DF93800BD1954 /* WeatherViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
 		998EEA581A9DF93800BD1954 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -58,6 +57,7 @@
 		998EEA861A9E0E2D00BD1954 /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
 		998EEA891A9E138100BD1954 /* WeatherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherView.h; sourceTree = "<group>"; };
 		998EEA8A1A9E138100BD1954 /* WeatherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherView.m; sourceTree = "<group>"; };
+		99E407511A9F30BE00C38C9A /* WeatherDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WeatherDB.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 				998EEA881A9E134A00BD1954 /* Views */,
 				998EEA581A9DF93800BD1954 /* Images.xcassets */,
 				998EEA5A1A9DF93800BD1954 /* LaunchScreen.xib */,
-				998EEA4F1A9DF93800BD1954 /* Weather.xcdatamodeld */,
+				99E407501A9F30BE00C38C9A /* WeatherDB.xcdatamodeld */,
 				998EEA7D1A9E003500BD1954 /* YQL */,
 				998EEA481A9DF93800BD1954 /* Supporting Files */,
 			);
@@ -305,7 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				998EEA871A9E0E2D00BD1954 /* Weather.m in Sources */,
-				998EEA511A9DF93800BD1954 /* Weather.xcdatamodeld in Sources */,
+				99E407521A9F30BE00C38C9A /* WeatherDB.xcdatamodeld in Sources */,
 				998EEA4E1A9DF93800BD1954 /* AppDelegate.m in Sources */,
 				998EEA8B1A9E138100BD1954 /* WeatherView.m in Sources */,
 				998EEA831A9E007800BD1954 /* WOEID.m in Sources */,
@@ -500,6 +500,7 @@
 				998EEA6D1A9DF93800BD1954 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		998EEA6E1A9DF93800BD1954 /* Build configuration list for PBXNativeTarget "WeatherTests" */ = {
 			isa = XCConfigurationList;
@@ -508,17 +509,18 @@
 				998EEA701A9DF93800BD1954 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		998EEA4F1A9DF93800BD1954 /* Weather.xcdatamodeld */ = {
+		99E407501A9F30BE00C38C9A /* WeatherDB.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				998EEA501A9DF93800BD1954 /* Weather.xcdatamodel */,
+				99E407511A9F30BE00C38C9A /* WeatherDB.xcdatamodel */,
 			);
-			currentVersion = 998EEA501A9DF93800BD1954 /* Weather.xcdatamodel */;
-			path = Weather.xcdatamodeld;
+			currentVersion = 99E407511A9F30BE00C38C9A /* WeatherDB.xcdatamodel */;
+			path = WeatherDB.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

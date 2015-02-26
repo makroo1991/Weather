@@ -25,12 +25,12 @@
         
         lbHeight = 25;
         
-        _textLb = [[UILabel alloc] initWithFrame:CGRectMake(0, lbHeight, _tempLb.bounds.size.width, lbHeight)];
+        _textLb = [[UILabel alloc] initWithFrame:CGRectMake(0, lbHeight, _tempLb.bounds.size.width, lbHeight + 5)];
         _textLb.textAlignment = NSTextAlignmentCenter;
         _textLb.font = [UIFont systemFontOfSize:lbHeight];
         [_tempLb addSubview:_textLb];
         
-        _cityLb = [[UILabel alloc] initWithFrame:CGRectMake(0, _tempLb.bounds.size.height - lbHeight, _tempLb.bounds.size.width, lbHeight)];
+        _cityLb = [[UILabel alloc] initWithFrame:CGRectMake(0, _tempLb.bounds.size.height - lbHeight, _tempLb.bounds.size.width, lbHeight + 5)];
         _cityLb.textAlignment = NSTextAlignmentCenter;
         _cityLb.font = [UIFont systemFontOfSize:lbHeight];
         [_tempLb addSubview:_cityLb];

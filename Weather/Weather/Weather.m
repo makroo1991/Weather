@@ -7,11 +7,18 @@
 //
 
 #import "Weather.h"
+#import "DBManager.h"
 
 @implementation Weather
 
+@dynamic city;
+@dynamic code;
+@dynamic date;
+@dynamic temp;
+@dynamic text;
+
 - (id)initWithDictionary:(NSDictionary *)dic {
-    self = [super init];
+    self = [NSEntityDescription insertNewObjectForEntityForName:[Weather entityName] inManagedObjectContext:[[DBManager sharedInstance] managedObjectContext]];
     
     if(self) {
         
@@ -20,13 +27,23 @@
         NSDictionary * conditionDic = [dic valueForKeyPath:@"query.results.channel.item.condition"];
         
         self.code = [NSNumber numberWithInt:[[conditionDic valueForKey:@"code"] intValue]];
-        self.date = [conditionDic valueForKey:@"date"];
+        
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"EEE, dd MMM yyyy HH:mm a zzz"];
+        NSDate *date = [dateFormatter dateFromString:[conditionDic valueForKey:@"date"]];
+        self.date = date;
         self.temp = [NSNumber numberWithInt:[[conditionDic valueForKey:@"temp"] intValue]];
         self.text = [conditionDic valueForKey:@"text"];
+        
+        [[DBManager sharedInstance] saveContext];
         
     }
     
     return self;
+}
+
++ (NSString *)entityName {
+    return @"Weather";
 }
 
 @end

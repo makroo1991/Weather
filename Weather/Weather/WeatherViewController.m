@@ -9,6 +9,7 @@
 #import "WeatherViewController.h"
 #import "WeatherView.h"
 #import "WeatherManager.h"
+#import "DBManager.h"
 
 @interface WeatherViewController ()
 
@@ -23,14 +24,20 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self initWeatherView];
-    
+    [self loadWeatherFromDB];
     [self updateWeather];
-    
 }
 
 - (void)initWeatherView {
     _weatherView = [[WeatherView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:_weatherView];
+}
+
+- (void)loadWeatherFromDB {
+     NSMutableArray *weatherArray= [[DBManager sharedInstance] loadContext];
+    
+    Weather *weather = [weatherArray firstObject];
+    [_weatherView updateView:weather];
 }
 
 - (void)updateWeather {
